@@ -1,76 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>tip calculator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>tip calculator</title>
 </head>
 <style>
 
+body{
+
+  font-family: Helvetica,
+}
+
+
+
+header{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+main {
+  height: 275;
+  width: 650;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-style: hidden;
+  margin: 25px;    
+  }
+
+
+  .left-side {
+    padding: 2em;
+    border-style: solid;
+    display:flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+
+  }
+
+  .output-container{
+    padding:2em;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    flex: basis 1005;
+    flex: 1;
+   
+    
+
+  }
 
 
 </style>
+
+
 <body>
 
+  <main >
 
+
+  <h1>
+
+    TIP CALCULATOR
+
+  </h1>
+
+<div class='left-side'>
+  <form>
     
-
-    <h1>
-
-        TIP CALCULATOR
-
-    </h1>
-
+    <div>
+      <label for="bill">Input bill:</label>
+      <br>
+      <input type="number" id="input-bill" name="bill" placeholder="0.00">
+      <br>
+      <br>
+    </div>
 
     <div>
-        <section>
-                <form>
-                    <p>
-                      <label for="bill">Input bill:</label>
-                      <input type="text" id="input-bill" name="bill"><br><br>
-                    </p>
+      <label for="tip">Input Tip%:</label>
+      <input type="number" id="input-tip" name="tip" placeholder="0">
 
-                    <p>
-                      <label for="tip">Input Tip:</label>
-                      <input type="text" id="input-tip" name="tip"><br><br>
-                    </p>
+      
+      
+    </div>
 
-                    <p>
-                      <label for="tip">Input People:</label>
-                      <input type="text" id="input-people">
-                    </p>
-
-                    <p>
-                      <input type="submit" value="Submit">
-                    </p>
-                  </form>
-
-                  <div class='display'>
-                    <div class="display-value" id='displpay-tip'></div>
-                    <div class="display-value" id='displpay-total'></div>
-                  </div>
-
-
-
-
-                  </div>
-                  
-
-
-
-        </section>
-
-
-
-
-
-
-
-
+    <div>
+      <label for="tip">Size of Party</label>
+      <button>-</button>
+      <input type="number" id="input-people" placeholder="0">
+      <button>+</button>
     </div>
 
 
+  </form>
+
+</div>
+
+
+  <div>
+
+  </div>
+
+
+  <div class='output-container'>
+
+    <div>Tip:
+      <div  id='display-tip'></div>
+    </div>
+    <br>
+    <div>Total:
+      <div  id='display-total'></div>
+    </div>
+    <br>
+
+    <div>Per Person:
+      <div id='display-split'></div>
+    </div>
+
+  </div>
 
 
 
@@ -78,6 +129,10 @@
 
 
 
-    <script src ="main.js"></script>
+</main>
+
+
+  <script src="main.js"></script>
 </body>
+
 </html>
