@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calc</title>
+    <style>
+        body{
+            font-family: Helvetica;
+        }
+
+        header{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        main {
+            height: 275;
+            width: 650;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            border-style: hidden;
+            margin: 25px;
+        }
+
+        .left-side {
+            padding: 2em;
+            border-style: solid;
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            flex: 1;
+        }
+
+        .output-container {
+            height: 275;
+            border-style: solid;
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            flex: 1;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            width: 15em;
+        }
+
+        .input-with-buttons {
+            display: flex;
+            flex-direction: row;
+        }
+
+        hr {
+            border: 0.5px solid rgb(48, 48, 48);
+        }
+
+        .display-tip {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        .display-total {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        .display-split {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calculate the Tip and Split the Bill</h1>
+    </header>
+    <main>
+        <div class="left-side">
+            <div>
+                <form class="tipCalc-form">
+
+                    <div class="input-container">
+                        <label>Bill Amount:</label>
+                        <div class="input-with-buttons">
+                            <button>-</button>
+                            <input id="bill" type="number" placeholder="0.00">
+                            <button>+</button>
+                        </div>
+                    </div>
+
+                    <div class="input-container">
+                        <label>Tip %:</label>
+                        <div class="input-with-buttons">
+                            <button>-</button>
+                            <input id="tip" type="number" name="tip">
+                            <button>+</button>
+                        </div>
+                    </div>
+
+                    <div class="input-container">
+                        <label>Size of Party:</label>
+                        <div class="input-with-buttons">
+                            <button>-</button>
+                            <input id="ppl" type="number" name="size">
+                            <button>+</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="output-container">
+
+            <div>Tip:
+                <div class="display-tip" id="displayTip"></div>
+            </div><br>
+
+            <div>Total:
+                <div class="display-total" id="displayTotal"></div>
+            </div><br>
+            <!-- <hr> -->
+            <div>Per person: 
+                <div class="display-split" id="displaySplit"></div>
+                
+            </div>
+
+        </div>
+    </main>
+    
+</body>
+</html>
